@@ -1,115 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="11.css">
-<title>菜鸟教程(runoob.com)</title>
+	<meta charset="UTF-8">
+	<title>Bootstrap 实例 - 列排序</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>一个自定义列表：</h1>
 
-<p>我的母亲有 <span style="color:blue;font-weight:bold">蓝色</span> 的眼睛，我得父亲有 <span style="color:darkolivegreen;font-weight:bold">碧绿色</span> 的眼睛。</p>
-<table border="2">
-<tr>
-<th>Header 1</th>
-<th>Header 2</th>
-</tr>
-<tr>
-<td>row 1, cell 1</td>
-<td>row 1, cell 2</td>
-</tr>
-<tr>
-<td>row 2, cell 1</td>
-<td>row 2, cell 2</td>
-</tr>
-</table>
-<ul>
-<li>Coffee</li>
-<li>Tea</li>
-<li>Milk</li>
-</ul>
-<ol start="50">
-<li>Coffee</li>
-<li>Tea</li>
-<li>Milk</li>
-</ol>
-<h4>嵌套列表：</h4>
-<ul>
-<li>Coffee</li>
-<li>Tea
-<ul>
-<li>Black tea</li>
-<li>Green tea
-<ul>
-<li>China</li>
-<li>Africa</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Milk</li>
-</ul>
-<div id="container" style="width:500px">
-<div id="header" style="background-color:#FFA500;">
-<h1 style="margin-bottom:0;">主要的网页标题</h1></div>
-<div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
-<b>菜单</b><br>
-HTML<br>
-CSS<br>
-JavaScript</div>
-<div id="content" style="background-color:#EEEEEE;height:200px;width:400px;float:left;">
-内容在这里</div>
-<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
-版权 ? runoob.com</div>
+<div class="container">
+
+   <h1>Hello, world!</h1>
+
+   <div class="row">
+      <p>排序前</p>
+      <div class="col-sm-4" style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+         我在左边
+      </div>
+      <div class="col-sm-8" style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+         我在右边
+      </div>
+   </div><br>
+   <div class="row">
+      <p>排序后</p>
+      <div class="col-sm-4 col-sm-push-8" 
+         style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, 
+         inset -1px 1px 1px #444;">
+         我在左边
+      </div>
+      <div class="col-sm-8 col-sm-pull-4" 
+         style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, 
+         inset -1px 1px 1px #444;">
+         我在右边
+      </div>
+   </div>
+
 </div>
-<form>
-First name: <input type="text" name="firstname"><br>
-Last name: <input type="text" name="lastname">
-</form> 
-<form>
-<input type="radio" name="sex" value="male">Male<br>
-<input type="radio" name="sex" value="female">Female
-</form> 
-<form name="input" action="html_form_action.php" method="get">
-Username: <input type="text" name="user">
-<input type="submit" value="Submit">
-</form> 
-<iframe src="demo_iframe.htm" width="500" height="800" name="iframe_a"></iframe>
-<p><a href="http://www.runoob.com" target="iframe_a">RUNOOB.COM</a></p>
-<script>
-document.write("<h1>这是一个标题</h1>");
-document.write("<p>这是一个段落。</p>");
-</script>
-<p id="demo">
-JavaScript 可以触发事件，就像按钮点击。</p>
-<script>
-function myFunction()
-{
-document.getElementById("demo").innerHTML="Hello JavaScript!";
-}
-</script>
-<button type="button" onclick="myFunction()">点我</button>
 
-<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
-<input id="demo1" type="text">
-<script>
-function myFunction1()
-{
-var x=document.getElementById("demo1").value;
-if(x==""||isNaN(x))
-{
-alert("不是数字");
-}
-}
-</script>
-<button type="button" onclick="myFunction1()">点击这里</button><br>
-<button onclick="this.innerHTML=Date()">现在的时间是?</button><br>
-<p id="demo3">56</p>
-<p>开启调试工具，在代码执行到第三行前会停止执行。</p>
-<script>
-var x = 15 * 5;
-debugger;
-document.getElementById("demo3").innerHTML = x;
-</script>
 </body>
 </html>
